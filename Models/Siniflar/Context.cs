@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Data.Entity;
 
-namespace MvcOnlineTicariOtomasyon.Models.Sınıflar
+namespace MvcOnlineTicariOtomasyon.Models.Siniflar
 {
     public class Context : DbContext
     {

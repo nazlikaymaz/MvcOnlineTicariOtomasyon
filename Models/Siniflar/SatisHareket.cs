@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace MvcOnlineTicariOtomasyon.Models.Sınıflar
+namespace MvcOnlineTicariOtomasyon.Models.Siniflar
 {
     public class SatisHareket
     {
