@@ -14,7 +14,7 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
 
         [Column(TypeName = "VarChar")]
         [StringLength(30)]
-        public string PersonelAd{ get; set; }
+        public string PersonelAd { get; set; }
 
         [Column(TypeName = "VarChar")]
         [StringLength(30)]
@@ -24,6 +24,7 @@ namespace MvcOnlineTicariOtomasyon.Models.Siniflar
         [StringLength(250)]
         public string PersonelGorsel { get; set; }
         public ICollection<SatisHareket> SatisHarekets { get; set; }
-        public Departman Departman { get; set; }
+        public int DepartmanID { get; set; }
+        public virtual Departman Departman { get; set; }
     }
 }
