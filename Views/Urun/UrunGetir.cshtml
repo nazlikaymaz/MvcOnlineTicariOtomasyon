@@ -3,10 +3,10 @@
     ViewBag.Title = "UrunGetir";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
+
 <br />
 <h2>Ürün Güncelleme Sayfası</h2>
 <br />
-
 @using (Html.BeginForm("UrunGuncelle", "Urun", FormMethod.Post))
 {
     @Html.HiddenFor(x => x.UrunID)
