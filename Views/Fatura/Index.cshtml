@@ -7,32 +7,26 @@
 
 <table class="table table-bordered" style="margin-top:20px">
     <tr>
-        <th>ID</th>
-        <th>Seri No</th>
-        <th>Sıra No</th>
-        <th>Vergi Dairesi</th>
+        <th>Seri Sıra No</th>
         <th>Tarih</th>
         <th>Saat</th>
-        <th>Teslim Eden</th>
-        <th>Teslim Alan</th>
         <th>Toplam</th>
         <th>Güncelle</th>
         <th>Detaylar</th>
+        <th>Popup Liste</th>
+        <th>Yeni Kalem</th>
     </tr>
     @foreach (var k in Model)
     {
         <tr>
-            <td>@k.FaturaID</td>
-            <td>@k.FaturaSeriNo</td>
-            <td>@k.FaturaSıraNo</td>
-            <td>@k.VergiDairesi</td>
+            <td>@k.FaturaSeriNo @k.FaturaSıraNo</td>
             <td>@k.Tarih</td>
             <td>@k.Saat</td>
-            <td>@k.TeslimEden</td>
-            <td>@k.TeslimAlan</td>
-            <td>@k.Toplam</td>
+            <td>@k.Toplam ₺</td>
             <td><a href="/Fatura/FaturaGetir/@k.FaturaID" class="btn btn-warning">Güncelle</a></td>
             <td><a href="/Fatura/FaturaDetay/@k.FaturaID" class="btn btn-default" style="background-color:cadetblue; color:white;">Detaylar</a></td>
+            <td><a href="/Fatura/FaturaDetay/@k.FaturaID" class="btn btn-default" style="background-color:burlywood; color:white;">Popup</a></td>
+            <td><a href="/Fatura/FaturaDetay/@k.FaturaID" class="btn btn-default" style="background-color:darkolivegreen; color:white;">Yeni Kalem</a></td>
         </tr>
     }
 
