@@ -13,7 +13,6 @@
         <th>Toplam</th>
         <th>Güncelle</th>
         <th>Detaylar</th>
-        <th>Popup Liste</th>
         <th>Yeni Kalem</th>
     </tr>
     @foreach (var k in Model)
@@ -25,11 +24,39 @@
             <td>@k.Toplam ₺</td>
             <td><a href="/Fatura/FaturaGetir/@k.FaturaID" class="btn btn-warning">Güncelle</a></td>
             <td><a href="/Fatura/FaturaDetay/@k.FaturaID" class="btn btn-default" style="background-color:cadetblue; color:white;">Detaylar</a></td>
-            <td><a href="/Fatura/FaturaDetay/@k.FaturaID" class="btn btn-default" style="background-color:burlywood; color:white;">Popup</a></td>
             <td><a href="/Fatura/FaturaDetay/@k.FaturaID" class="btn btn-default" style="background-color:darkolivegreen; color:white;">Yeni Kalem</a></td>
         </tr>
     }
-
 </table>
 <a href="/Fatura/FaturaEkle" class="btn btn-info">Yeni Fatura Girişi</a>
+<br />
+<br />
+<button type="button" class="btn btn-primary" style="background-color:brown; color:white" data-toggle="modal" data-target="#Modal1">Popup Penceresi</button>
 
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Popup Diyalog Ekranı</h2>
+            </div>
+            <div class="modal-body">
+                <table class="table table-bordered">
+                    <tr>
+                        <td>Seri No</td>
+                        <td>Sıra No</td>
+                        <td>Tutar</td>
+                    </tr>
+                    @foreach (var x in Model)
+                    {
+                        <tr>
+                            <td>@x.FaturaSeriNo</td>
+                            <td>@x.FaturaSıraNo</td>
+                            <td>@x.Toplam</td>
+                        </tr>
+                    }
+                </table>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Tamam</button>
+            </div>
+        </div>
+    </div>
+</div>
