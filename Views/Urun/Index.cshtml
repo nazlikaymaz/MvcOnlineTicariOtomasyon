@@ -15,7 +15,6 @@
 }
 <br />
 <table class="table table-bordered">
-
     <tr>
         <th>ÜRÜN</th>
         <th>MARKA</th>
@@ -25,6 +24,7 @@
         <th>KATEGORİ</th>
         <th>SİL</th>
         <th>GÜNCELLE</th>
+        <th>SATIŞ YAP</th>
     </tr>
     @foreach (var u in Model)
     {
@@ -37,9 +37,8 @@
             <td>@u.Kategori.KategoriAd</td>
             <td><a href="/Urun/UrunSil/@u.UrunID" class="btn btn-danger">Sil</a></td>
             <td><a href="/Urun/UrunGetir/@u.UrunID" class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Urun/SatisYap/@u.UrunID" class="btn btn-default" style="background-color:mediumaquamarine">Satış Yap</a></td>
         </tr>
     }
 </table>
 <a href="/Urun/YeniUrun" class="btn btn-info">Yeni Ürün</a>
-
-

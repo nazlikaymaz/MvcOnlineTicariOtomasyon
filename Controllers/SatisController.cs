@@ -36,7 +36,7 @@ namespace MvcOnlineTicariOtomasyon.Controllers
             List<SelectListItem> deger3 = (from x in c.Personels.ToList()
                                            select new SelectListItem
                                            {
-                                               Text = x.PersonelAd + " " + x.PersonelID,
+                                               Text = x.PersonelAd + " " + x.PersonelSoyad,
                                                Value = x.PersonelID.ToString()
                                            }).ToList();
             ViewBag.dgr1 = deger1;
